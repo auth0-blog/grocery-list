@@ -1,0 +1,39 @@
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+body {
+    margin: 0;
+}
+
+section {
+    @extend .container;
+    padding: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+
+    .title {
+        @include make-xs-column(12);
+
+        h1 {
+            margin-top: 0;
+        }
+    }
+
+    .navigation {
+        @include make-xs-column(12);
+
+        text-align: right;
+        border-top: 1px solid #ccc;
+
+        a {
+            display: inline-block;
+            padding: 10px;
+        }
+    }
+
+    input {
+        @extend .form-control;
+    }
+}
+
+.input-group-btn button {
+    height: 34px;
+}

@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+        <div class="jumbotron">
+            <h2>This is your grocery list.</h2>
+            <p>Use the form below to add an item, or click in one on the list to remove it.</p>
+            <form (ngSubmit)="addItem()">
+                <div class="input-group">
+                    <input type="text" [(ngModel)]="newItem" name="newItem"
+                           class="form-control" placeholder="New item...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">Add</button>
+                    </span>
+                </div>
+            </form>
+            <div class="list-group">
+                <a class="list-group-item" (click)="removeItem(i)"
+                   *ngFor="let item of getItems(); let i = index">
+                    {{item}}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

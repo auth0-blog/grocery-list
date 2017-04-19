@@ -1,0 +1,16 @@
+<nav class="navbar navbar-default">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" [routerLink]="['']"></a>
+        </div>
+        <ul class="nav navbar-nav pull-right">
+            <li>
+                <a *ngIf="!authenticationService.loggedIn()" href="https://bkrebs.auth0.com/authorize?scope=openid%20email&audience=grocery-list-api&response_type=id_token%20token&client_id=IRjsYlIY0pb1VeKwxhFKON2KX6GIj3MD&redirect_uri=http://localhost:3000/callback&nonce={{nonce}}">Log In</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<section>
+    <router-outlet></router-outlet>
+</section>
