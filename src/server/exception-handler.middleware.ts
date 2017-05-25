@@ -2,7 +2,7 @@ import {Exception} from "../common/exception";
 
 export default async (ctx, next) => {
     try {
-        return next();
+        return await next();
     } catch (err) {
         if (err instanceof Exception) {
             // it transform the exception to an object literal
